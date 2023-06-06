@@ -1,7 +1,7 @@
 import wandb
 import random
 
-for n in range(100):
+for x in range(100):
 
     run = wandb.init(entity="wandb-smle",
                     project="soccer_players")
@@ -12,3 +12,5 @@ for n in range(100):
         "val_acc": random.random(),
         "val_loss": random.random(),
     })
+
+    run.finish()
